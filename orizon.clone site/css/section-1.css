@@ -1,0 +1,133 @@
+section{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 0 2%;
+    margin: 8% 0;
+}
+.small-des{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+   width: 60vw;
+}
+.items{
+    height: 50px;
+    width: 400px;
+    overflow: hidden;
+}
+.items p{
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: opacity 1s;
+    font-size: 1.2rem;
+}
+.items img{
+    height: 20px;
+}
+.main-paragraph {
+    margin-top: 1rem;
+    font-size: 3rem;
+}
+.main-paragraph span{
+color: var(--main-blue);
+}
+/* .view-showreel */
+.video{
+    position: fixed;
+    z-index: 1000;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    background-color: rgba(201, 201, 201, 0.23);
+}
+
+.filler{
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.video video{
+    width: 70%;
+    z-index: 1000;
+}
+
+.video-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    cursor:default ;
+}
+
+.video-content > div:nth-child(1){
+    display: flex;
+    justify-content: center;
+    margin: 1.2rem;
+}
+
+.video-content > div:nth-child(2){
+    z-index: 1000;
+}
+
+.video:target{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.activator:hover::before{
+    width: 240px;
+}
+
+.activator::before{
+    content: "";
+    position: absolute;
+    height: 80px;
+    width: 0px;
+    transition: width 0.2s;
+    background-color: var(--main-color);
+    opacity: 0.1;
+}
+.activator{
+    display: flex;
+    width: 240px;
+   height: 85px;
+   box-shadow: 75px 30px 100px rgba(0,0,0,0.1);
+}
+.activator video{
+    height: 100%;
+}
+.activator div:nth-child(1){
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    overflow: hidden;
+    width: 40%;
+}
+
+.activator div:nth-child(2){
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.activator div:nth-child(2){
+    text-align: center;
+}
+.small-paragraph{
+    border-left: solid 0.35rem var(--main-blue);
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    font-weight: lighter;
+    width:60%;
+    padding-left: 2rem;
+}
